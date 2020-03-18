@@ -1,0 +1,27 @@
+.card {
+  margin: 5px;
+  padding: 5px;
+  color: #172b4d;
+  text-align: left;
+
+  p {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  .control {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      border-radius: 3px;
+      margin: 0 3px;
+      padding: 5px 10px;
+      line-height: 15px;
+    }
+  }
+}

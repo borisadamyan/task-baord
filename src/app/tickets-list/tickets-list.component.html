@@ -1,0 +1,9 @@
+<div class="card">
+  <h5>{{title}}</h5>
+  <tickets-list-item
+    *ngFor="let ticket of list[1]"
+    [ticket]="ticket"></tickets-list-item>
+  <div *ngIf="list[1].length === 0" class="no-tasks">
+    No tickets
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="card">
+  <p class="title">{{ticket.title}} - {{ticket.priority.title}}</p>
+  <p class="description">
+    {{ (ticket.description.length > 50) ? (ticket.description | slice:0:50) + '...' : (ticket.description) }}
+  </p>
+  <span class="name">{{ticket.assignee.name}}</span>
+  <div *ngIf="group === 'status.id' && ticket.id!=='empty'" class="control">
+    <button *ngIf="ticket.status.id !== 0" (click)="prev(ticket)"> <</button>
+    <button *ngIf="ticket.status.id !== 4" (click)="next(ticket)"> ></button>
+  </div>
+</div>

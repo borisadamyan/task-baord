@@ -1,0 +1,50 @@
+<section>
+  <div class="row">
+    <div class="col-md-3 sorting">
+      <label for="">Sort By:</label>
+      <ng-select [items]="sortCategory"
+                 bindLabel="title"
+                 [searchable]="false"
+                 [clearable]="false"
+                 (change)="onSortSelected($event)"
+                 [(ngModel)]="defaultSort"
+                 bindValue="id">
+      </ng-select>
+    </div>
+    <div class="col-md-1 tickets-sort">
+      <label></label><br/>
+      <a (click)="onClickSortButton()">
+        <span *ngIf="!isAsc" class="down">↓</span>
+        <span *ngIf="isAsc" class="up">↑</span>
+      </a>
+    </div>
+    <div class="col-md-3 grouping">
+      <label for="">Group By:</label>
+      <ng-select [items]="groupCategory"
+                 bindLabel="title"
+                 [searchable]="false"
+                 [clearable]="false"
+                 (change)="onGroupSelected($event)"
+                 [(ngModel)]="defaultGroup"
+                 bindValue="id">
+      </ng-select>
+
+    </div>
+    <div class="col-md-5 filter">
+      <label></label><br/>
+      <input (keyup)="filtering($event)" type="text" placeholder="Filter">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="board d-flex">
+        <tickets-list
+          *ngFor="let list of groupedTickets; let index = index"
+          [list]="list"
+          [groupStatuses]="groupStatuses"
+          [searchText]="searchText">
+        </tickets-list>
+      </div>
+    </div>
+  </div>
+</section>

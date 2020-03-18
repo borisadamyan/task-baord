@@ -1,0 +1,23 @@
+.card {
+  width: 240px;
+  //border: 1px solid;
+  border-radius: 3px;
+  margin: 50px 5px;
+  background-color: rgba(235, 236, 240, .7);
+
+  h5 {
+    text-align: center;
+    padding-top: 7px;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #172b4d;
+    font-weight: 700;
+  }
+
+  .no-tasks {
+    word-wrap: break-word;
+    color: #172b4d;
+    padding: 10px;
+    opacity: .7;
+  }
+}

@@ -1,0 +1,33 @@
+.ng-select ::ng-deep .ng-select-container {
+  border-radius: 0;
+}
+section{
+  max-width: 1250px;
+  margin: 15px auto;
+}
+.filter {
+  text-align: right;
+  input{
+    margin-top: 10px;
+    height: 36px;
+    text-indent: 10px;
+  }
+}
+
+.board {
+  display: flex;
+  overflow-x: scroll;
+  text-align: center;
+}
+.tickets-sort{
+  a{
+    span{
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+  }
+}
+
+
